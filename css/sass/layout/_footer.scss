@@ -1,0 +1,146 @@
+@use "../helpers/variables" as *; 
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.footer{
+    background-color: #e2e2e2;
+    padding:  30px 0 0;
+    overflow: hidden;
+    margin-top: 50px;
+    .gallery{
+        width: 50%;
+        @media #{$minSmall} and #{$maxSmall}{
+            width: 100%;
+        }
+        @media #{$maxMobile} {
+            width: 100%;
+        }
+        float: $float-left;
+        .image-box{
+            padding: 5px;
+            &:not(:last-of-type){
+                margin: 10px 0 ;
+            }
+            img{
+                width: 150px;
+                padding: 3px;
+                background-color: #fff;
+                max-width: 100%;
+                border: 1px solid #333;
+            }
+            .text{
+                display: inline-block;
+                width: calc(100% - 156px);
+                padding: 0 15px;
+                position: relative;
+                bottom: 15px;
+                @media #{$maxMobile} {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+                h4{
+                    color: $redColor;
+                    margin-bottom: 5px;
+                }
+                p{
+                    line-height: 1.7;
+                    color: #333;
+                }
+            }
+        }
+    }
+    .info{
+        width: 25%;
+        float: $float-left;
+        color: #333;
+        @media #{$minSmall} and #{$maxSmall} {
+            width: 50%;
+            margin-top: 40px;
+            padding-left: 10px;
+        }
+        @media #{$maxMobile}{
+            width: 100%;
+            margin-top: 40px;
+        }
+        ul{
+            margin-top: 20px;
+            li{
+                margin-bottom: 7px;
+            }
+        }
+    }
+    .contact{
+        float: $float-left;
+        width: 25%;
+        @media #{$maxSmall} {
+            width: 50%;
+            margin-top: 40px;
+        }
+        @media #{$maxMobile} {
+            width: 100%;
+            margin-top: 40px;
+        }
+        form{
+            margin: 20px 0 30px;
+            input:not([type="submit"]) , textarea{
+                margin-bottom: 10px;
+                font-size: 17px;
+                padding: 5px;
+                border: none;
+                width: 100%;
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                -ms-border-radius: 6px;
+                -o-border-radius: 6px;
+                &:focus{
+                    outline: none;
+                }
+            }
+            textarea:focus::-webkit-input-placeholder,
+            input:focus::-webkit-input-placeholder {
+                transition: 0.3s;
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -ms-transition: 0.3s;
+                -o-transition: 0.3s;
+                opacity: 0;
+            }
+            input:not([type="submit"]){
+                height: 50px;
+            }
+            textarea{
+                height: 120px;
+            }
+        }
+    }
+    .section-title{
+        color: #444;
+        font-weight: normal;
+    }
+    .copyright{
+        padding: 25px 0 ;
+        margin-top: 30px;
+        overflow: hidden;
+        color: #444;
+        border-top: 1px solid #444;
+        .text{
+            float: $float-left;
+            width: 50%;
+            @media #{$maxMobile}{
+                width: 100%;
+            }
+        }
+        .author{
+            float: $float-left;
+            text-align: $text-left;
+            width: 50%;
+            @media #{$maxMobile}{
+                width: 100%;
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    }
+}

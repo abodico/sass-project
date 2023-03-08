@@ -1,0 +1,19 @@
+@use "../helpers/variables" as * ;
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    position: relative;
+    @media #{$minSmall}{
+        width: 750px;
+    }
+    @media #{$minMedium}{
+        width: 970px;
+    }
+    @media #{$minLarge}{
+        width: 1170px;
+    }
+}

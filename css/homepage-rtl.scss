@@ -1,0 +1,76 @@
+@use "sass/helpers/variables" as * ;
+@use "sass/layout/grid" as * ;
+$float-left: right;
+$float-right: left;
+$text-right: left;
+$text-left: right;
+
+.header {
+    .logo {
+        @media #{$minMedium} {
+            float: $float-left; //Direction
+            text-align: $text-left;
+        }
+        .the-toggler{
+            left: 10px;
+            right: auto;
+        }
+    }
+    li {
+        float: $float-left;
+    }
+    @media #{$minMedium} {
+        float: $float-left; //Direction
+        text-align: $text-left;
+    }
+}
+
+// Start Services
+.services{
+    .service-box{
+        @media #{$minMedium}{
+            float: $float-left;
+        }
+    }
+}
+// End Services
+// Start Players
+.our-players{
+    .player-box{
+        @media #{$minSmall}{
+            float: $float-left;
+        }
+        @media #{$minMedium}{
+            text-align: $text-left;
+        }
+    }
+}
+// End Players
+// Start Images
+.images{
+    .img-box{
+        float: $float-left;
+    }
+}
+// End Images
+.footer {
+    width: 100%;
+        float: $float-left;
+        @media #{$minLarge} {
+        }
+    .info {
+        float: $float-left;
+    }
+    .contact {
+        float: $float-left;
+        .copyright {
+            .text {
+                float: $float-left;
+            }
+            .author {
+                float: $float-left;
+                text-align: $text-left;
+            }
+        }
+    }
+}

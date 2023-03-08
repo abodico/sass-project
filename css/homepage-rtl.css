@@ -1,0 +1,85 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+  position: relative;
+}
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width:992px) {
+  .header .logo {
+    float: right;
+    text-align: right;
+  }
+}
+.header .logo .the-toggler {
+  left: 10px;
+  right: auto;
+}
+.header li {
+  float: right;
+}
+@media (min-width:992px) {
+  .header {
+    float: right;
+    text-align: right;
+  }
+}
+
+@media (min-width:992px) {
+  .services .service-box {
+    float: right;
+  }
+}
+
+@media (min-width:768px) {
+  .our-players .player-box {
+    float: right;
+  }
+}
+@media (min-width:992px) {
+  .our-players .player-box {
+    text-align: right;
+  }
+}
+
+.images .img-box {
+  float: right;
+}
+
+.footer {
+  width: 100%;
+  float: right;
+}
+.footer .info {
+  float: right;
+}
+.footer .contact {
+  float: right;
+}
+.footer .contact .copyright .text {
+  float: right;
+}
+.footer .contact .copyright .author {
+  float: right;
+  text-align: right;
+}

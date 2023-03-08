@@ -1,0 +1,76 @@
+@use "../helpers/variables" as *;
+.header{
+    padding: 20px 0;
+    border-bottom: 1px solid $greyColor;
+    overflow: hidden;
+    .logo{
+        position: relative;
+        @media #{$minSmall}{
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        @media #{$minMedium}{
+            width: 30%;
+            float: $float-left; //Direction
+            text-align: $text-left;
+        }
+        h2{
+            margin:15px 0  ;
+        }
+    }
+    .navbar{
+        margin-top: 15px;
+        overflow: hidden; 
+        /*Direction*/
+        background-color: $redColor;
+        border-radius:15px;
+        -webkit-border-radius:15px;
+        -moz-border-radius:15px;
+        -ms-border-radius:15px;
+        -o-border-radius:15px;
+        li{
+            width: 20%;
+            float: $float-left;
+            font-size: 20px;
+            text-align: center;
+            @media #{$maxMobile} {
+                display: block;
+                float: none;
+            }
+            a{
+                display: block;
+                padding: 20px 10px;
+                color: #fff;
+                &:hover{
+                    color: #ddd;
+                }
+            }
+        }
+        @media #{$minSmall} {
+            width: 100%;
+            float: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+        @media #{$minMedium} {
+            width: 70%;
+            float: $float-left; //Direction
+            text-align: $text-left;
+            margin-top: 15px;
+        }
+        @media #{$maxMobile}{
+            &.hide{
+                display: none;
+            }
+            li{
+                width: 100%;
+            }
+            border-radius:0;
+            -moz-border-radius:0;
+            -ms-border-radius:0;
+            -o-border-radius:0;
+            -webkit-border-radius:0;
+        }
+    }
+}

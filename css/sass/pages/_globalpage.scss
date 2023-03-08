@@ -1,0 +1,23 @@
+@use "../helpers/variables" as * ;
+body{
+    background-color: #f6f6f6;
+    font: { 
+        family : Tahoma;
+        size: 16px;
+    }
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    li a{
+        text-decoration: none;
+    }
+}
+.clear-fix{
+    clear: both;
+}
+.text-center-xs{
+    @media #{$maxMobile}{
+        text-align: center;
+    }
+}
